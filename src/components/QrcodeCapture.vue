@@ -10,7 +10,7 @@
     standout="bg-info"
     input-class="inputfile"
     rounded
-    @change="captureImage"
+    @change="onChangeInput"
   />
 </template>
 
@@ -33,7 +33,7 @@ export default {
   },
   data() {
     return {
-      capturedImage: null,
+      capturedImage: null
     };
   },
   methods: {
