@@ -1,11 +1,16 @@
 <template lang="html">
-  <input
-    @change="onChangeInput"
+  <q-input
+    id="image"
+    v-model="capturedImage"
     type="file"
     name="image"
-    accept="image/*"
+    label="Choose a Picture Manually"
+    accept="image/*;capture=camera"
     capture="environment"
-    multiple
+    standout="bg-info"
+    input-class="inputfile"
+    rounded
+    @change="captureImage"
   />
 </template>
 
@@ -26,7 +31,11 @@ export default {
       default: Worker
     }
   },
-
+  data() {
+    return {
+      capturedImage: null,
+    };
+  },
   methods: {
     onChangeInput(event) {
       const files = [...event.target.files];
