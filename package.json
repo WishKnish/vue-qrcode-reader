@@ -1,11 +1,19 @@
 {
-  "name": "vue-qrcode-reader",
+  "name": "@wishknish/vue-qrcode-reader",
   "description": "A set of Vue.js components for detecting and decoding QR codes.",
   "version": "0.0.0-development",
   "author": {
     "name": "Niklas Gruhn",
     "email": "niklas.gruhn@gmail.com"
   },
+  "contributors": [
+    {
+      "name": "Eugene Teplitsky",
+      "email": "eugene@wishknish.com",
+      "homepage": "https://wishknish.com",
+      "role": "developer"
+    }
+  ],
   "keywords": [
     "vue",
     "vuejs",
@@ -26,9 +34,11 @@
     "build:common": "cross-env NODE_ENV=production webpack --config config/webpack.config.common.js --progress --hide-modules",
     "lint": "eslint --ext .js,.vue src"
   },
-  "repository": "github:gruhn/vue-qrcode-reader",
-  "bugs": "https://github.com/gruhn/vue-qrcode-reader/issues",
-  "homepage": "https://gruhn.github.io/vue-qrcode-reader",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WishKnish/vue-qrcode-reader"
+  },
+  "bugs": "https://github.com/WishKnish/vue-qrcode-reader/issues",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
